@@ -6,7 +6,6 @@ const siteHeader = document.querySelector('.site-header');
 const currentYear = document.querySelector('#current-year');
 const contactForm = document.querySelector('#contact-form');
 const formStatus = document.querySelector('#form-status');
-const toast = document.querySelector('#toast');
 const revealItems = document.querySelectorAll('[data-reveal]');
 const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 
@@ -86,16 +85,6 @@ primaryNav?.querySelectorAll('a').forEach((link) => {
 contactForm?.addEventListener('submit', (event) => {
   event.preventDefault();
   formStatus.textContent = 'Nice start — connect this form to your email service when you are ready.';
-});
-
-document.querySelectorAll('.placeholder-link').forEach((link) => {
-  link.addEventListener('click', (event) => {
-    event.preventDefault();
-    const projectName = link.dataset.project || 'This project';
-    toast.textContent = `${projectName} is ready for your real link in index.html.`;
-    toast.classList.add('is-visible');
-    window.setTimeout(() => toast.classList.remove('is-visible'), 3400);
-  });
 });
 
 const galleryModal = document.querySelector('#gallery-modal');

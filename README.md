@@ -22,9 +22,9 @@ All editable portfolio content lives in `index.html`.
 
 - **Photo:** Replace the `.portrait-placeholder` block with an image such as `<img src="assets/profile.jpg" alt="Alexis Negrón" />`. Keep the existing class if you want the same sizing.
 - **Project screenshots:** The Healthy Body Rehab and International Cabinets cards now use optimized screenshots from `assets/images/` and open an accessible gallery. Add or replace gallery images in the matching folder, then update the image count and captions in `script.js` if needed.
-- **Project names and descriptions:** Update the `<h3>` and the paragraph inside each `.project-card`. The first two cards currently use verified public details for Healthy Body Rehab and International Cabinets Group Corp.; the third card remains a generic placeholder.
+- **Project names and descriptions:** Update the `<h3>` and the paragraph inside each `.project-card`. The two cards currently use verified public details for Healthy Body Rehab and International Cabinets Group Corp.
 - **Tech stacks:** Edit the `<li>` elements inside each `.tech-list`. The current labels reflect the public repository structure, not a private implementation detail.
-- **Project links:** The first two cards point to their verified live domains. For the third card, replace `href="#contact"` on its `.placeholder-link` with the real project URL and remove the `placeholder-link` class and `data-project` attribute.
+- **Project links:** Both cards point to their verified live domains. Update the `href` values if either project URL changes.
 - **Project onboarding:** The `Start a project` button opens `onboarding.html`, a three-step brief that collects project direction, scope, budget, timeline, and contact details.
 - **Contact email:** The portfolio and onboarding email drafts use `alexisjnegron@gmail.com` as the recipient.
 - **Forms:** The forms are intentionally non-functional until you add a Formspree endpoint to the inline setup notes in `index.html` and `onboarding.html`.

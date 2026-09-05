@@ -640,7 +640,7 @@ html.js .reveal.is-visible {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 23px;
 }
 
@@ -663,10 +663,6 @@ html.js .reveal.is-visible {
 
 .project-visual-mint {
   background: linear-gradient(145deg, #b2d8e8, #557895 56%, #1c3140);
-}
-
-.project-visual-sky {
-  background: linear-gradient(145deg, #b6cbd0, #6c7e7e 56%, #2e3938);
 }
 
 .project-visual::after {
@@ -766,38 +762,6 @@ html.js .reveal.is-visible {
   height: 62px;
   background: rgba(244, 241, 234, 0.22);
 }
-
-.mock-window-outline {
-  background: rgba(244, 241, 234, 0.76);
-  border: 1px solid rgba(23, 23, 21, 0.62);
-  box-shadow: none;
-  transform: translateY(4px) rotate(3deg);
-}
-
-.mock-window-ring {
-  display: block;
-  width: 80px;
-  height: 80px;
-  margin: 38px auto 14px;
-  border: 11px solid var(--accent-deep);
-  border-right-color: transparent;
-  border-radius: 50%;
-}
-
-.mock-window-stacked-lines {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.mock-window-stacked-lines i {
-  display: block;
-  height: 4px;
-  background: var(--dark-text);
-}
-
-.mock-window-stacked-lines i:nth-child(2) { width: 70%; opacity: 0.5; }
-.mock-window-stacked-lines i:nth-child(3) { width: 48%; opacity: 0.28; }
 
 .project-info {
   display: flex;
@@ -1020,30 +984,6 @@ html.js .reveal.is-visible {
 .footer-links {
   display: flex;
   gap: 24px;
-}
-
-.toast {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  z-index: 10;
-  max-width: 300px;
-  padding: 12px 14px;
-  color: var(--paper-soft);
-  background: var(--night-soft);
-  border: 1px solid var(--line);
-  border-radius: 2px;
-  box-shadow: 0 12px 30px rgba(17, 17, 16, 0.25);
-  font-size: 13px;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(10px);
-  transition: opacity 180ms ease, transform 180ms ease;
-}
-
-.toast.is-visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .visually-hidden {
