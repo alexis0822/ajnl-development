@@ -111,11 +111,13 @@ const galleryPreviousButton = document.querySelector('#gallery-prev');
 const galleryNextButton = document.querySelector('#gallery-next');
 const galleryTriggers = document.querySelectorAll('.gallery-trigger');
 
+const healthyBodyGalleryVersion = '20260905';
+
 const galleryCatalog = {
   healthybody: {
     title: 'Healthy Body Rehab',
     images: [1, 2, 3, 4].map((number) => ({
-      src: `assets/images/healthybody/healthybody-${String(number).padStart(2, '0')}.jpg`,
+      src: `assets/images/healthybody/healthybody-${String(number).padStart(2, '0')}.jpg?v=${healthyBodyGalleryVersion}`,
       alt: `Healthy Body Rehab website screenshot ${number}`,
       caption: `Healthy Body Rehab — view ${number}`,
     })),
