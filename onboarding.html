@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Start an AJNL Development project with a short onboarding questionnaire."
+    />
+    <title>Start a Project — AJNL Development</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="onboarding.css" />
+    <script src="script.js" defer></script>
+    <script src="onboarding.js" defer></script>
+  </head>
+  <body class="onboarding-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="AJNL Development home">
+          <span class="brand-mark" aria-hidden="true">A</span>
+          <span class="brand-name">AJNL Development</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span class="menu-toggle-label">Menu</span>
+          <span class="menu-toggle-icon" aria-hidden="true"><i></i><i></i></span>
+        </button>
+
+        <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+          <a href="index.html#about">About</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#contact">Contact</a>
+          <a class="nav-cta" href="onboarding.html" aria-current="page">Start a project <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="onboarding-main">
+      <div class="container">
+        <div class="onboarding-intro">
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Start with a good question</p>
+          <h1>Let’s make room<br /><span>for the right idea.</span></h1>
+          <p>
+            A few thoughtful answers help me understand what you are trying to achieve before we talk about pages, features, or timelines.
+          </p>
+        </div>
+
+        <div class="onboarding-layout">
+          <aside class="onboarding-sidebar" aria-label="Onboarding overview">
+            <p class="sidebar-kicker">Project intake / 2026</p>
+            <p class="sidebar-note">There are no wrong answers. Rough notes are welcome, and you can come back to this form later.</p>
+            <div class="sidebar-line" aria-hidden="true"></div>
+            <p class="sidebar-note">Your responses stay in this browser until you choose to copy or email the summary.</p>
+          </aside>
+
+          <section class="onboarding-card" aria-labelledby="form-title">
+            <div class="form-header">
+              <div>
+                <p class="form-kicker">AJNL / Project brief</p>
+                <h2 id="form-title">Tell me what you’re building.</h2>
+              </div>
+              <button class="text-button" id="clear-draft" type="button">Clear draft</button>
+            </div>
+
+            <ol class="stepper" aria-label="Onboarding progress">
+              <li class="stepper-item is-active" data-step-indicator="0"><span>01</span><strong>Direction</strong></li>
+              <li class="stepper-item" data-step-indicator="1"><span>02</span><strong>Scope</strong></li>
+              <li class="stepper-item" data-step-indicator="2"><span>03</span><strong>Timing</strong></li>
+            </ol>
+
+            <!-- Add the Formspree endpoint to this form's action when automatic delivery is ready. -->
+            <form id="onboarding-form" novalidate>
+              <fieldset class="onboarding-step is-active" data-step="0">
+                <legend>First, the big picture</legend>
+                <p class="step-description">What is this site supposed to help you do?</p>
+
+                <div class="field-grid field-grid-two">
+                  <div class="field-group">
+                    <label for="client-name">Your name <span aria-hidden="true">*</span></label>
+                    <input id="client-name" name="clientName" type="text" autocomplete="name" placeholder="Alex Morgan" required />
+                    <span class="field-error" data-error-for="clientName"></span>
+                  </div>
+                  <div class="field-group">
+                    <label for="client-email">Email address <span aria-hidden="true">*</span></label>
+                    <input id="client-email" name="clientEmail" type="email" autocomplete="email" placeholder="alex@example.com" required />
+                    <span class="field-error" data-error-for="clientEmail"></span>
+                  </div>
+                </div>
+
+                <div class="field-group">
+                  <label for="project-type">What kind of project is this? <span aria-hidden="true">*</span></label>
+                  <select id="project-type" name="projectType" required>
+                    <option value="">Choose one</option>
+                    <option>Business website</option>
+                    <option>Local service or organization</option>
+                    <option>Personal portfolio or creative site</option>
+                    <option>Online store</option>
+                    <option>Something else</option>
+                  </select>
+                  <span class="field-error" data-error-for="projectType"></span>
+                </div>
+
+                <div class="field-group">
+                  <label for="project-goal">What are you hoping the website will help you achieve? <span aria-hidden="true">*</span></label>
+                  <textarea id="project-goal" name="projectGoal" rows="5" placeholder="A few sentences about the business, audience, or idea behind the site." required></textarea>
+                  <span class="field-error" data-error-for="projectGoal"></span>
+                </div>
+              </fieldset>
+
+              <fieldset class="onboarding-step" data-step="1" hidden>
+                <legend>Now, the scope</legend>
+                <p class="step-description">What kind of help would make the biggest difference?</p>
+
+                <div class="field-group">
+                  <span class="field-label">What would you like help with? <span aria-hidden="true">*</span></span>
+                  <div class="choice-grid" role="group" aria-describedby="scope-error">
+                    <label class="choice-card"><input type="checkbox" name="scope" value="New website" /><span>New website</span></label>
+                    <label class="choice-card"><input type="checkbox" name="scope" value="Website redesign" /><span>Website redesign</span></label>
+                    <label class="choice-card"><input type="checkbox" name="scope" value="Landing page" /><span>Landing page</span></label>
+                    <label class="choice-card"><input type="checkbox" name="scope" value="Maintenance or updates" /><span>Maintenance or updates</span></label>
+                  </div>
+                  <span class="field-error" id="scope-error" data-error-for="scope"></span>
+                </div>
+
+                <div class="field-group">
+                  <label for="current-site">Do you have a current website?</label>
+                  <input id="current-site" name="currentSite" type="url" inputmode="url" placeholder="https://example.com" />
+                  <span class="field-hint">Optional — leave blank if this is a new idea.</span>
+                </div>
+
+                <div class="field-group">
+                  <label for="features">Are there any pages, features, or references you already have in mind?</label>
+                  <textarea id="features" name="features" rows="5" placeholder="Examples: services page, booking form, gallery, online payments, reference sites."></textarea>
+                </div>
+              </fieldset>
+
+              <fieldset class="onboarding-step" data-step="2" hidden>
+                <legend>Finally, the shape of the project</legend>
+                <p class="step-description">A rough range is enough. This helps set a realistic starting point.</p>
+
+                <div class="field-grid field-grid-two">
+                  <div class="field-group">
+                    <label for="budget">What budget range feels realistic?</label>
+                    <select id="budget" name="budget">
+                      <option value="">Choose one</option>
+                      <option>Under $1,000</option>
+                      <option>$1,000–$2,500</option>
+                      <option>$2,500–$5,000</option>
+                      <option>$5,000+</option>
+                      <option>I’m not sure yet</option>
+                    </select>
+                  </div>
+                  <div class="field-group">
+                    <label for="timeline">When would you like to get started?</label>
+                    <select id="timeline" name="timeline">
+                      <option value="">Choose one</option>
+                      <option>As soon as possible</option>
+                      <option>Within the next 1–2 months</option>
+                      <option>In 3–6 months</option>
+                      <option>I’m flexible</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="field-group">
+                  <label for="extra-notes">Anything else I should know?</label>
+                  <textarea id="extra-notes" name="extraNotes" rows="6" placeholder="Share context, constraints, or what a successful outcome would look like."></textarea>
+                </div>
+
+                <label class="consent-line"><input type="checkbox" name="followUp" value="Yes" checked /><span>It’s okay to follow up with me about this project.</span></label>
+              </fieldset>
+
+              <div class="form-actions">
+                <button class="button button-secondary" id="previous-step" type="button" hidden>Back</button>
+                <button class="button button-primary" id="next-step" type="submit">Continue <span aria-hidden="true">→</span></button>
+                <button class="button button-primary" id="submit-onboarding" type="submit" hidden>Build my summary <span aria-hidden="true">↗</span></button>
+              </div>
+              <p class="autosave-note" id="autosave-note" role="status" aria-live="polite">Draft saved in this browser.</p>
+            </form>
+
+            <section class="onboarding-success" id="onboarding-success" aria-labelledby="success-title" hidden>
+              <p class="form-kicker">Your brief is ready</p>
+              <h2 id="success-title">That gives us<br /><span>a strong starting point.</span></h2>
+              <p class="success-copy">Copy this summary or open it in your device’s default email provider. Nothing is sent automatically; review the draft and press Send.</p>
+              <textarea class="summary-output" id="summary-output" aria-label="Project summary" readonly></textarea>
+              <div class="success-actions">
+                <button class="button button-primary" id="copy-summary" type="button">Copy summary <span aria-hidden="true">↗</span></button>
+                <button class="button button-secondary" id="open-email" type="button">Open default email <span aria-hidden="true">↗</span></button>
+              </div>
+              <button class="text-button" id="edit-brief" type="button">Edit my answers</button>
+              <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+            </section>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="current-year">2026</span> AJNL Development</p>
+        <div class="footer-links">
+          <a href="index.html">Back to portfolio <span aria-hidden="true">↗</span></a>
+          <a href="mailto:alexisjnegron@gmail.com">Email <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
