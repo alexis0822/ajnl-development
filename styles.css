@@ -88,6 +88,15 @@ textarea:focus-visible {
   transform: translateY(0);
 }
 
+.page-top-anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .container {
   width: min(calc(100% - 48px), var(--container));
   margin: 0 auto;
