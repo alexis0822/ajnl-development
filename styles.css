@@ -18,6 +18,7 @@
   --body: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --mono: "Courier New", Courier, monospace;
   --container: 1180px;
+  --header-offset: 84px;
   --reveal-distance: 26px;
   --reveal-duration: 700ms;
 }
@@ -28,11 +29,11 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+  scroll-padding-top: var(--header-offset);
 }
 
 section[id] {
-  scroll-margin-top: 100px;
+  scroll-margin-top: var(--header-offset);
 }
 
 body {
@@ -534,25 +535,6 @@ html.js .reveal.is-visible {
   background: var(--accent);
 }
 
-.hero-label {
-  position: absolute;
-  z-index: 2;
-  bottom: 27px;
-  color: rgba(245, 241, 232, 0.56);
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.hero-label-left {
-  left: 24px;
-}
-
-.hero-label-right {
-  right: 24px;
-}
-
 .section {
   padding-top: 150px;
   padding-bottom: 150px;
@@ -564,7 +546,7 @@ html.js .reveal.is-visible {
 
 .section-heading {
   display: grid;
-  grid-template-columns: 0.45fr 1.55fr;
+  grid-template-columns: 1fr;
   gap: 35px;
   padding-bottom: 80px;
   border-bottom: 1px solid var(--line);
@@ -1530,6 +1512,10 @@ body.gallery-open {
 }
 
 @media (max-width: 540px) {
+  :root {
+    --header-offset: 76px;
+  }
+
   .container {
     width: min(calc(100% - 32px), var(--container));
   }
@@ -1584,19 +1570,6 @@ body.gallery-open {
   .browser-front {
     bottom: 13%;
     left: -33%;
-  }
-
-  .hero-label {
-    bottom: 18px;
-    font-size: 8px;
-  }
-
-  .hero-label-left {
-    left: 16px;
-  }
-
-  .hero-label-right {
-    right: 16px;
   }
 
   .about-details {
